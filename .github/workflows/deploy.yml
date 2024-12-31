@@ -1,9 +1,9 @@
-name: Deploy on Push to Develop
+name: Deploy on Push to Main
 
 on:
   push:
     branches:
-      - develop
+      - main
 
 jobs:
   deploy:
