@@ -1,0 +1,27 @@
+name: Deploy on Push to Develop
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Pull updates to server
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        SERVER_USER: root
+        SERVER_HOST: 45.81.235.181
+        REPO_PATH: /var/www/classenalex.eu/portfolio
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh-keyscan -H $SERVER_HOST >> ~/.ssh/known_hosts
+        ssh $SERVER_USER@$SERVER_HOST "cd $REPO_PATH && git pull origin develop"
