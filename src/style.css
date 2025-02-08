@@ -777,8 +777,8 @@ video {
   height: 1px;
 }
 
-.max-h-10 {
-  max-height: 2.5rem;
+.h-full {
+  height: 100%;
 }
 
 .max-h-12 {
@@ -813,16 +813,16 @@ video {
   width: 37rem;
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-full {
   width: 100%;
 }
 
 .w-screen {
   width: 100vw;
-}
-
-.w-auto {
-  width: auto;
 }
 
 .max-w-2xl {
@@ -1117,6 +1117,31 @@ video {
 .object-left {
   -o-object-position: left;
      object-position: left;
+}
+
+.object-\[10px_10px\] {
+  -o-object-position: 10px 10px;
+     object-position: 10px 10px;
+}
+
+.object-\[30px\] {
+  -o-object-position: 30px;
+     object-position: 30px;
+}
+
+.object-\[50px\] {
+  -o-object-position: 50px;
+     object-position: 50px;
+}
+
+.object-\[100px\] {
+  -o-object-position: 100px;
+     object-position: 100px;
+}
+
+.object-\[100px_100px\] {
+  -o-object-position: 100px 100px;
+     object-position: 100px 100px;
 }
 
 .p-2\.5 {
