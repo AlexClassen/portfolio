@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - main
+    
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    environment: live
 
     steps:
     - name: Checkout code
