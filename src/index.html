@@ -1,46 +1,61 @@
 <!doctype html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
-    <title>Alex Classen</title>
+    <title>Alex Classen - Developer Portfolio</title>
+
+    <!-- Meta Description for SEO -->
+    <meta name="description" content="Welcome to Alex Classen's portfolio. Explore his journey as a developer, volunteer, and advocate for positive change. Learn about his projects, experience, and technical expertise.">
+
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="Alex Classen, portfolio, developer, software engineer, volunteer, projects, Luxembourg, Innsbruck">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Alex Classen - Developer Portfolio">
+    <meta property="og:description" content="Discover Alex Classen's journey as a developer, volunteer, and advocate for positive change. Check out his projects and achievements.">
+    <meta property="og:image" content="./images/headshot.jpeg">
+    <meta property="og:url" content="https://classenalex.eu">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alex Classen - Developer Portfolio">
+    <meta name="twitter:description" content="Discover Alex Classen's journey as a developer, volunteer, and advocate for positive change. Check out his projects and achievements.">
+    <meta name="twitter:image" content="./images/headshot.jpeg">
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Alex Classen",
+        "url": "https://classenalex.eu",
+        "image": "./images/headshot.jpeg",
+        "jobTitle": "Software Developer",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Innsbruck",
+            "addressCountry": "Austria"
+        },
+        "sameAs": [
+            "https://github.com/AlexClassen",
+            "https://www.linkedin.com/in/classenalex/",
+            "https://www.instagram.com/alex_classen/"
+        ]
+    }
+    </script>
+
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-VV2EW4JW75"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'G-VV2EW4JW75');
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const menuButton = document.getElementById("mobile-menu-button");
-            const closeButton = document.getElementById("mobile-menu-close");
-            const mobileMenu = document.getElementById("mobile-menu");
-            const overlay = document.getElementById("menu-overlay");
-            const menuLinks = document.querySelectorAll("#mobile-menu a");
-
-            function toggleMenu() {
-                const isOpen = !mobileMenu.classList.contains("hidden");
-                mobileMenu.classList.toggle("hidden", isOpen);
-                overlay.classList.toggle("hidden", isOpen);
-                menuButton.setAttribute("aria-expanded", !isOpen);
-            }
-
-            menuButton.addEventListener("click", toggleMenu);
-            closeButton.addEventListener("click", toggleMenu);
-            overlay.addEventListener("click", toggleMenu);
-
-            // Close menu when a link is clicked
-            menuLinks.forEach(link => {
-                link.addEventListener("click", toggleMenu);
-            });
-        });
     </script>
 
 </head>
